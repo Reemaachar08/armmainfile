@@ -3,7 +3,7 @@
     "contentVersion": "1.2.0.0",
     "parameters": {
         "adminPassword": {
-            "defaultValue": "Root12345678$",
+            "defaultValue": "Root12345678&&",
             "type": "securestring",
             "minLength": 8,
             "maxLength": 128,
@@ -38,7 +38,7 @@
         "labNetworkSecurityGroupName": "[concat(variables('labVirtualMachineName'), '-nsg')]",
         "labNetworkInterfaceName": "[concat(variables('labVirtualMachineName'), '-nic')]",
         "labPublicIpAddressName": "[concat(variables('labVirtualMachineName'), '-ip')]",
-        "labpublicIpAddressDNSName": "tapudupudum",
+        "labpublicIpAddressDNSName": "track",
 
         "virtualNetworkName": "[concat(resourceGroup().name, '-vnet')]",
         "addressPrefix": "176.16.0.0/16",
