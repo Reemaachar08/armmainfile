@@ -3,7 +3,7 @@
     "contentVersion": "1.2.0.0",
     "parameters": {
         "adminPassword": {
-            "defaultValue": "Root12345678&&",
+            "defaultValue": "Root12345678$",
             "type": "securestring",
             "minLength": 8,
             "maxLength": 128,
@@ -12,7 +12,7 @@
             }
         },
         "adminUsername": {
-            "type": "String"
+            "type": "string"
           },
           "AzureUserName": {
             "type": "string"
@@ -38,7 +38,7 @@
         "labNetworkSecurityGroupName": "[concat(variables('labVirtualMachineName'), '-nsg')]",
         "labNetworkInterfaceName": "[concat(variables('labVirtualMachineName'), '-nic')]",
         "labPublicIpAddressName": "[concat(variables('labVirtualMachineName'), '-ip')]",
-        "labpublicIpAddressDNSName": "track",
+        "labpublicIpAddressDNSName": "tapudupudum",
 
         "virtualNetworkName": "[concat(resourceGroup().name, '-vnet')]",
         "addressPrefix": "176.16.0.0/16",
@@ -439,7 +439,7 @@
                                 "POST",
                                 "OPTIONS",
                                 "PUT",
-                                "PATCH"
+                                "pATCH"
                             ],
                             "maxAgeInSeconds": 0,
                             "exposedHeaders": [
@@ -676,20 +676,20 @@
     ],
     "outputs": {
     "adminUsername": {
-	"type": "String",
+	"type": "string",
     "value": "demo"
     },
 
     "LABVM Admin Username": {
-      "type": "String",
+      "type": "string",
       "value": "[parameters('adminUsername')]"
     },
     "LABVM Admin Password": {
-      "type": "String",
+      "type": "string",
       "value": "[parameters('adminPassword')]"
     },
     "LABVM DNS Name": {
-      "type": "String",
+      "type": "string",
       "value": "[reference(resourceId('Microsoft.Network/publicIPAddresses',variables('labpublicIpAddressName'))).dnsSettings.fqdn]"
     }
   }
